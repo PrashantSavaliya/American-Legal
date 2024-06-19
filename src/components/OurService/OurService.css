@@ -52,8 +52,9 @@
 
 .accordian-detail1 {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     background-color: #f2f2f2 !important;
+    background: #f2f2f2 !important;
     margin-left: 0%;
 }
 
@@ -61,6 +62,7 @@
     margin-bottom: 10px;
     margin-left: 50px;
     color: var(--p-color);
+    /* margin-left: 15px; */
 }
 
 .down-arrow {
@@ -102,6 +104,12 @@
     .accordian-detail1 ul li {
         margin-bottom: 10px;
         margin-left: 20px;
+    .accordian-detail1{
+        justify-content: start;
+    }
+    .accordian-detail1 ul li {
+        margin-bottom: 10px;
+        margin-left: 15px;
         color: var(--p-color);
         text-align: start; 
     }
