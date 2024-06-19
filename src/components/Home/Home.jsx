@@ -16,9 +16,9 @@ const Home = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setImageIndex(prevIndex => (prevIndex + 1) % 3); 
-        }, 1000); // Change image every 2 seconds
+        }, 1000); 
 
-        return () => clearInterval(interval); // Clean up the interval on component unmount
+        return () => clearInterval(interval); 
     }, []);
 
     const handleInputFocus = () => {
@@ -54,9 +54,7 @@ const Home = () => {
                             onFocus={handleInputFocus}
                             onBlur={handleInputBlur}
                         />
-                        <span>
-                            <VscSearch className='search-icon' />
-                        </span>
+                        <span><VscSearch className='search-icon' /></span>
                     </div>
                     {isInputFocused && (
                         <div className='suggestions'>
@@ -78,29 +76,12 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="right-home">
+            <div className="right-home">
                 <div className="black-box">
                     <div className="yellow-box">
                         <img src={home_img} alt="" className="image" />
                     </div>
                 </div>
-            </div> */}
-               <div className="right-home">
-                {imageIndex === 0 && (
-                    <>
-                        <img src={bg} alt="Background" className="bg-image" />
-                        <img src={home_img} alt="Home" className="home-image" />
-                    </>
-                )}
-                {imageIndex === 1 && (
-                    <>
-                        <img src={bg} alt="Background" className="bg-image" />
-                        <img src={manImg} alt="Businessman" className="man-image" />
-                    </>
-                )}
-                {imageIndex === 2 && (
-                    <img src={businessmanImg} alt="Man" className="businessman-image" />
-                )}
             </div>
         </div>
     )
