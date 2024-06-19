@@ -24,9 +24,6 @@
     gap: 32px;
     font-family: 'Rubik', sans-serif;
     position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    /* border: 1px solid black; */
 }
 
 .navbar-items>li {
@@ -38,10 +35,8 @@
 }
 
 .dropdown-menu {
-    cursor: pointer;
     position: absolute;
-    top: 170%;
-    left: -10%;
+    top: 100%;
     color: white;
     background-color: #000;
     border: 1px solid #ddd;
