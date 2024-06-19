@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './PopularServices.css';
 import service_img1 from '../../assets/service_img1.png';
 import service_img2 from '../../assets/service_img2.png';
@@ -6,7 +6,7 @@ import service_img3 from '../../assets/service_img3.png';
 import service_img4 from '../../assets/service_img4.jpeg';
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const Services = () => {
+const Services = ({ scrollToOurServices }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const services = [
@@ -53,7 +53,7 @@ const Services = () => {
                     <span key={index} className={index === activeIndex ? 'active' : ''}></span>
                 ))}
             </div>
-            <button className='btn'>View More <FaArrowRightLong className='btn-img' /></button>
+            <button className='btn' onClick={scrollToOurServices}>View More <FaArrowRightLong className='btn-img' /></button>
             <div className="service-detail">
                 <div className="service-detail-left">
                     By combining the <span>accessibility</span> and feel of a small-town lawyer with the breadth and <span>power of modern technology</span>, we can provide <span>expertly crafted legal solutions</span> and <span>experienced lawyers</span> at <span>lower prices</span>. <span className="dot"></span>

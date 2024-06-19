@@ -1,3 +1,4 @@
+import React, { useRef } from 'react';
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
@@ -11,15 +12,26 @@ import Client from "./components/Client/Client";
 
 function App() {
 
+  const OurservicesRef = useRef(null);
+
+  const scrollToOurServices = () => {
+    const offset = 25;
+    if (OurservicesRef.current) {
+      const topPos = OurservicesRef.current.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: topPos, behavior: 'smooth' });
+    }
+  };
   return (
     <>
-    <ScrollToTopButton />
+      <ScrollToTopButton />
       <Navbar />
       <Home />
-      <PopularServices />
+      <PopularServices scrollToOurServices={scrollToOurServices} />
       <Working />
       <WhyUs />
-      <OurService />
+      <div ref={OurservicesRef}>
+        <OurService />
+      </div>
       <Client />
       <Contact />
       <Footer />

@@ -58,6 +58,10 @@
     cursor: pointer;
 }
 
+.dropdown-menu li:hover {
+    color: var(--yellow-color);
+}
+
 .language-menu {
     position: absolute;
     display: flex;
