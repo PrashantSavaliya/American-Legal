@@ -7,17 +7,21 @@
     justify-content: space-between;
     background: #fff;
 }
+
 .left-home {
     margin-top: 50px;
     width: 100%; 
 }
+
 .left-home h2 {
     font-size: 70px;
     font-weight: 700;
 }
+
 .legal {
     margin-top: -20px;
 }
+
 .left-home h3 {
     gap: 10px;
     font-size: 24px;
@@ -26,14 +30,17 @@
     align-items: center;
     font-weight: 400;
 }
+
 .left-home p {
     padding: 16px 0px;
     color: var(--p-color);
     width: 100%; 
 }
+
 .input-container {
     position: relative;
 }
+
 .input-div {
     display: flex;
     align-items: center;
@@ -41,6 +48,7 @@
     height: 48px;
     position: relative;
 }
+
 .input-div input {
     height: 48px;
     width: 62%; 
@@ -48,6 +56,7 @@
     outline: none;
     padding-left: 10px;
 }
+
 .input-div span {
     display: flex;
     align-items: center;
@@ -59,6 +68,7 @@
     cursor: pointer;
     border-radius: 5px;
 }
+
 .suggestions {
     position: absolute;
     top: 40%;
@@ -71,20 +81,25 @@
     width: 60%;
     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
 }
+
 .suggestion-item {
     padding: 0px 16px;
     cursor: pointer;
 }
+
 .suggestion-item:hover {
     color: #9c9c9c;
 }
+
 .search-icon {
     height: 20px;
     width: 20px;
 }
+
 .left-home div {
     margin: 15px 0px;
 }
+
 .popular {
     font-size: 0.875rem;
     border: 1px solid black;
@@ -93,99 +108,66 @@
     margin-right: 10px;
     line-height: 1.25rem;
 }
-/* .right-home {
-    padding: 5px;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-.black-box {
+
+.right-home {
     position: relative;
-    background-color: black;
-    height: 580px;
-    width: 650px;
-    margin: auto;
-}
-.yellow-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--yellow-color);
-    border-radius: 30px;
-    height: 80%;
-    width: 80%;
-    z-index: 1;
-}
-.image {
-    position: relative;
-    display: block;
     width: 100%;
-    height: 464px;
-    object-fit: cover;
-    z-index: 0;
-} */
-.bg-image {
-    position: absolute;
-    top: 20%;
-    left: 60%;
-    margin-left: -40px;
-    width: 35%;
-    height: 70%;
-    object-fit: cover;
-    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
+
 .home-image {
     position: absolute;
-    top: 56%;
-    left: 77%;
+    top: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     z-index: 1;
     max-width: 60%;
     max-height: 68%; 
 }
-.man-image{
+
+.man-image {
     position: absolute;
-    top: 58%;
-    left: 76%;
+    top: 54%;
+    left: 55%;
     transform: translate(-50%, -50%);
     z-index: 1;
     max-width: 60%;
-    max-height: 65%; 
+    max-height: 59.7%; 
 }
-.businessman-image{
+
+.businessman-image {
     position: relative;
-    width: 50%;
-    top: 25%;
-    height: auto;
+    width: 90%;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    top: 55%;
     z-index: 2; 
-}
-.image {
-    top: 50%;
-    position: relative;
-    width: 50%;
-    height: 50%;
-    bottom: -10px;
-    object-fit: cover;
-    z-index: 0;
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px){
-    .popular-names{
+@media (max-width: 768px) {
+    .popular-names {
         display: none;
     }
 }
+
 @media (min-width: 768px) {
     .left-home, .right-home {
         width: 50%; 
     }
+
     .left-home p {
         width: 70%;
     }
+
     .black-box {
         height: 580px;
     }
+
     .yellow-box {
         height: 80%;
         width: 80%;
@@ -193,39 +175,46 @@
 }
 
 @media (max-width: 1024px) {
-     .home-main{
+    .home-main {
         display: flex;
         flex-direction: column;
-     }
-     .left-home{
+    }
+
+    .left-home {
         flex-basis: 100%;
         width: 100%;
-     }
-     .right-home{
+    }
+
+    .right-home {
         flex-basis: 100%;
         width: 100%;
-        background-color: black;
-     }
-     .left-home h2{
+         background-color: rgba(26, 26, 26, 255);
+    }
+
+    .left-home h2 {
         text-align: center;
         font-weight: 600;
-     }
-     .left-home h3{
+    }
+
+    .left-home h3 {
         align-items: center;
         justify-content: center;
         text-align: center;
         font-weight: 400;
-     }
-     .left-home p{
+    }
+
+    .left-home p {
         display: none;
-     }
-     .input-div{
+    }
+
+    .input-div {
         text-align: center;
         justify-content: center;
         padding-bottom: 20px;
-     }
-     div{
+    }
+
+    div {
         text-align: center;
         justify-content: center;
-     }
+    }
 }
