@@ -1,42 +1,22 @@
-import React, { useState, useEffect } from "react";
-import './Home.css'
-import home_img from '../../assets/home_img.png'
-import manImg from '../../assets/manImg.png'
-import businessmanImg from '../../assets/businessmanImg.png'
-import bg from '../../assets/bg.png'
+import React, { useState, useEffect } from 'react';
+import '../Home/Home.css';
+import home_img from '../../assets/home_img.png';
+import manImg from '../../assets/man.png'; 
+import bg from '../../assets/bg.png';
+import businessmanImg from '../../assets/businessmanImg.png'; // New image
 import { VscSearch } from "react-icons/vsc";
 
-const Home = () => {
-    const [inputValue, setInputValue] = useState('');
-    const [isInputFocused, setIsInputFocused] = useState(false);
-
-    const popularItems = ["Form an LLC", "Demand a Refund", "Compensation"];
+const Banner = () => {
     const [imageIndex, setImageIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setImageIndex(prevIndex => (prevIndex + 1) % 3); 
-        }, 1000); 
+            setImageIndex(prevIndex => (prevIndex + 1) % 3); // Cycle through 3 image sets
+        }, 2000); // Change image every 2 seconds
 
-        return () => clearInterval(interval); 
+        return () => clearInterval(interval); // Clean up the interval on component unmount
     }, []);
 
-    const handleInputFocus = () => {
-        setIsInputFocused(true);
-    };
-
-    const handleInputBlur = () => {
-        setIsInputFocused(false);
-    };
-
-    const handleInputChange = (event) => {
-        setInputValue(event.target.value);
-    };
-
-    const handleSuggestionClick = (suggestion) => {
-        setInputValue(suggestion);
-        setIsInputFocused(false);
-    };
     return (
         <div className='container home-main'>
             <div className="left-home">
@@ -44,47 +24,35 @@ const Home = () => {
                 <h2 className='legal'>Legal Needs</h2>
                 <h3>promptly and affordably <div className='dot'></div></h3>
                 <p>American Legal is a virtual law firm on a mission to provide everyone with timely, high quality legal representation and solutions at affordable prices.</p>
-                <div className='input-container'>
-                    <div className='input-div'>
-                        <input
-                            type="text"
-                            placeholder='Find a service: i.e., "Form an LLC"'
-                            value={inputValue}
-                            onChange={handleInputChange}
-                            onFocus={handleInputFocus}
-                            onBlur={handleInputBlur}
-                        />
-                        <span><VscSearch className='search-icon' /></span>
-                    </div>
-                    {isInputFocused && (
-                        <div className='suggestions'>
-                            {popularItems.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className='suggestion-item'
-                                    onMouseDown={() => handleSuggestionClick(item)}
-                                >
-                                    {item}
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                    <div className='popular-names'>
-                        Popular: {popularItems.map((item, index) => (
-                            <span key={index} className='popular'>{item}</span>
-                        ))}
-                    </div>
+                <div className='input-div'>
+                    <input type="text" placeholder='Find a service: i.e., "Form an LLC"' />
+                    <span>
+                        <VscSearch className='search-icon' />
+                    </span>
+                </div>
+                <div className='popular-names'>
+                    Popular : <span className='popular'>Form an LLC</span><span className='popular'>Demand a Refund</span><span className='popular'>Compensation</span>
                 </div>
             </div>
             <div className="right-home">
-                <div className="black-box">
-                    <div className="yellow-box">
-                        <img src={home_img} alt="" className="image" />
-                    </div>
-                </div>
+                {imageIndex === 0 && (
+                    <>
+                        <img src={bg} alt="Background" className="bg-image" />
+                        <img src={home_img} alt="Home" className="home-image" />
+                    </>
+                )}
+                {imageIndex === 1 && (
+                    <>
+                        <img src={bg} alt="Background" className="bg-image" />
+                        <img src={manImg} alt="Man" className="man-image" />
+                    </>
+                )}
+                {imageIndex === 2 && (
+                <img src={businessmanImg} alt="Businessman" className="businessman-image" />
+                )}
             </div>
         </div>
-    )
+    );
 }
 
-export default Home
+export default Banner;
