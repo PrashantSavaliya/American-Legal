@@ -15,7 +15,7 @@ function App() {
   const OurservicesRef = useRef(null);
 
   const scrollToOurServices = () => {
-    const offset = 25;
+    const offset = 125;
     if (OurservicesRef.current) {
       const topPos = OurservicesRef.current.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top: topPos, behavior: 'smooth' });
