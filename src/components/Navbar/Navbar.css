@@ -49,16 +49,13 @@
     border-radius: 12px;
     min-width: 180px;
     font-weight: 600;
+    list-style: none;
 }
 
 .dropdown-menu li {
     width: 100%;
     padding: 10px 15px;
     cursor: pointer;
-}
-
-.dropdown-menu li:hover {
-    color: var(--yellow-color);
 }
 
 .language-menu {
