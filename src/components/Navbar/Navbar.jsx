@@ -120,9 +120,9 @@ function Navbar() {
                             </ul>
                         )}
                     </li>
-                    <li onClick={() => setNav(false)}>About Us</li>
-                    <li onClick={() => setNav(false)}>FAQs</li>
-                    <li onClick={() => setNav(false)}>Contacts</li>
+                    <li className="AFC" onClick={() => setNav(false)}>About Us</li>
+                    <li className="AFC"onClick={() => setNav(false)}>FAQs</li>
+                    <li className="AFC"onClick={() => setNav(false)}>Contacts</li>
                 </ul>
             </div>
         </div>

@@ -150,7 +150,7 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .popular {
+    .popular-names {
         display: none;
     }
 }
@@ -188,7 +188,7 @@
     .right-home {
         flex-basis: 100%;
         width: 100%;
-        background-color: rgba(26, 26, 26, 255);
+        background-color: white;
     }
 
     .left-home h2 {
