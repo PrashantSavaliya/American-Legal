@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 import PopularServices from "./components/PopularServices/PopularServices";
 import WhyUs from "./components/WhyUs/WhyUs";
+import About from './components/About/About';
 import Working from "./components/Working/Working";
 import OurService from "./components/OurService/OurService";
 import Client from "./components/Client/Client";
@@ -27,6 +28,7 @@ function App() {
       <Navbar />
       <Home />
       <PopularServices scrollToOurServices={scrollToOurServices} />
+      < About />
       <Working />
       <WhyUs />
       <div ref={OurservicesRef}>

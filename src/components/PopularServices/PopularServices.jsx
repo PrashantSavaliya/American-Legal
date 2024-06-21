@@ -54,14 +54,14 @@ const Services = ({ scrollToOurServices }) => {
                 ))}
             </div>
             <button className='btn' onClick={scrollToOurServices}>View More <FaArrowRightLong className='btn-img' /></button>
-            <div className="service-detail">
+            {/* <div className="service-detail">
                 <div className="service-detail-left">
                     By combining the <span>accessibility</span> and feel of a small-town lawyer with the breadth and <span>power of modern technology</span>, we can provide <span>expertly crafted legal solutions</span> and <span>experienced lawyers</span> at <span>lower prices</span>. <span className="dot"></span>
                 </div>
                 <div className="service-detail-right">
                     <img src={service_img4} alt="Service Detail" />
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
