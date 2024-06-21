@@ -103,38 +103,34 @@
         margin-left: 0;
     }
 
+    .accordian-detail1 {
+        justify-content: start;
+    }
+
     .accordian-detail1 ul li {
         margin-bottom: 10px;
-        margin-left: 20px;
-
-        .accordian-detail1 {
-            justify-content: start;
-        }
-
-        .accordian-detail1 ul li {
-            margin-bottom: 10px;
-            margin-left: 15px;
-            color: var(--p-color);
-            text-align: start;
-        }
+        margin-left: 30px;
+        color: var(--p-color);
+        text-align: start;
     }
 }
-    /* Responsive design for mobile phones */
-    @media (max-width: 768px) {
-        .accordian-title1 {
-            font-size: 18px;
-            height: auto;
-        }
 
-        .accordian-title1 div {
-            width: 100%;
-        }
-
-        .our-service-number,
-        .down-arrow {
-            margin: 10px;
-            height: 25px;
-            width: 25px;
-            font-size: 13px;
-        }
+/* Responsive design for mobile phones */
+@media (max-width: 768px) {
+    .accordian-title1 {
+        font-size: 18px;
+        height: auto;
     }
+
+    .accordian-title1 div {
+        width: 100%;
+    }
+
+    .our-service-number,
+    .down-arrow {
+        margin: 10px;
+        height: 25px;
+        width: 25px;
+        font-size: 13px;
+    }
+}
